@@ -1,0 +1,10 @@
+
+
+# characteristice of OOPs
+
+1. class
+2. object 
+3. abstration
+4. inheritance
+5. polymorphism
+6. encapsulation
