@@ -20,41 +20,62 @@ public:
 
     void area()
     {
-        cout << "Area of house for " << length << ", " << breadth << " is " << length * breadth << endl << endl;
+        cout << "Area of house for " << length << ", " << breadth << " is " << length * breadth << endl
+             << endl;
     }
 };
 
 // inheritance
 //-
 // constructor and type - non parameterized / defalt constructor , parameterized constructor and copy constructor
-//non parameterized
+// non parameterized
 class Person
 {
 private:
     string name;
-    int age,parameterized_constructor;
+    int age, parameterized_constructor;
     float height;
 
 public:
-Person(int x)
+    // Person(int x) // parameterized constructor
+    // {
+    //     name = "null";
+    //     age = 0;
+    //     height = 0.0f;
+    //     parameterized_constructor = x;
+    // }
+
+    // Person(Person &obj2) // copy constructor
+    // {   
+    //     name = obj2.name;
+    //     age = obj2.age;
+    //     height = obj2.height;
+    //     parameterized_constructor = obj2.parameterized_constructor;
+    // }
+
+    //overload constructor
+    Person(int x = 12, string name= "null" ) // parameterized constructor
     {
-        name = "null";
-        age = 0;
+    cout << "overload constructor" << endl;
+        name = name;
+        age = x;
         height = 0.0f;
         parameterized_constructor = x;
     }
-    Person()
-    {
-        name = "null";
-        age = 0;
-        height = 0.0f;
-    }
+
+    // Person()
+    // {
+    //     name = "null";
+    //     age = 0;
+    //     height = 0.0f;
+    // }
     void getData()
     {
         cout << "Name: " << name << endl
              << "Age: " << age << endl
-             << "Height: " << height << endl 
-             << "parameterized_constructor: "<< parameterized_constructor << endl << endl;
+             << "Height: " << height << endl
+             << "parameterized_constructor: " << parameterized_constructor << endl
+             << endl;
     }
 };
 ///
@@ -70,10 +91,11 @@ public:
     {
         cout << "Name: " << name << endl
              << "Age: " << age << endl
-             << "Height: " << height << endl << endl;
+             << "Height: " << height << endl
+             << endl;
     }
 };
-// // parameterized constructor 
+// // parameterized constructor
 // class PersonA
 // {
 // private:
@@ -95,6 +117,7 @@ public:
 //              << "Height: " << height << endl << endl;
 //     }
 // };
+
 // ---main function -------
 
 int main()
@@ -107,18 +130,23 @@ int main()
     h1.area();
 
     // object for Person constructor / class
-    Person obj;
-    obj.getData(); // its give a garbage value of parametrized constructor
+    // Person obj;
+    // obj.getData(); // its give a garbage value of parametrized constructor
 
-    Person obj2(25);
-    obj2.getData();
-
-
-    Personwioutconstructor obj1;
-    obj1.getData(); // its give some garbage value 
+    // Person obj2(25);
+    // obj2.getData();
+    // copy constructor
+    // cout << "copy constructor" << endl;
+    // Person obj3(obj2);
+    // obj3.getData();
+    // Personwioutconstructor obj1;
+    // obj1.getData(); // its give some garbage value
 
     // PersonA obj2(15);
     // obj2.getData();
 
+    //overload constructor
+    Person obj;
+    obj.getData();
     return 0;
 }
