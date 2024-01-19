@@ -3,7 +3,8 @@ using namespace std;
 int addnum(int a , int b);
 
 int main(){
-    std::cout << "Hello, World!" << std::endl;
+
+    std::cout << "Hello, World! \n" ;
     std::cout << addnum(5,2) << std::endl;
     int fn = 10;
     int sn = 20;
@@ -13,6 +14,12 @@ int main(){
     //    ASCII 
     int i = 97;
     cout << char(i) << endl;
+
+    const int myNum = 15;  // myNum will always be 15
+    // myNum = 10;  // error: assignment of read-only variable 'myNum' 
+    
+    const int minutesPerHour = 60;
+    const float PI = 3.14; 
 
     return 0;
 }
